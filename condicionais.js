@@ -13,3 +13,26 @@ if (x >= 1) {
 else {
     console.log('O programa encerrou');
 }; 
+
+
+
+
+// Condicional 1 - if/else
+if(condicao) {
+    'Expressão 1';
+} else {
+    'Caso contrário, essa expressão'
+}
+
+// Condicional 2 - if/else if/else
+if(condicao) {
+    'Expressão 1';
+} else if(condicao2) {
+    'Caso contrário e a primeira condição não for satisfeita, expressão 2';
+} else {
+    'Caso não seja nenhuma das alternativas acima, cai nesse bloco';
+} 
+
+// Condicional 3 - Operador Ternário
+condicao ? 'Expressão 1' : 'Caso contrário, expressão 2'
+

@@ -32,7 +32,7 @@ function info(id) {
 function admin(id) {
     if(usuarios[id].id == 1 && usuarios[id].isAdmin) {
         console.log('Acesso permitido!');
-        infoUsuario(id);
+        info(id);
     } else {
         console.log('Acesso negado!');
     };

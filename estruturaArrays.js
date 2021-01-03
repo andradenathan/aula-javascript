@@ -1,13 +1,9 @@
-var valores = ["Ás", "Valete", "Rei"]
-var naipes = ["Espadas", "Paus", "Copas"]
+var numeros = [1, 2, 3, 4, 6, 7, 8, 10];
 
-var cartas = valores.map((valor) => {
-    naipes.forEach((naipe) => {
-        console.log(`${valor} de ${naipe}`);
-    });
+var dobro = numeros.map((num) => {
+    return console.log(num * 2);
 });
 
-var numeros = [1, 2, 3, 4, 6, 7, 8, 10];
 var pares = numeros.filter((num) => {
     if(num % 2 == 0){
         var arrayPar = num;
