@@ -11,7 +11,8 @@ const main = () => {
         const n = parseInt(answer);
         array = preencherArray(n); 
         console.log(`Ímpares e múltiplos de 3 até ${n}:`);
-        imparesMultiploTres(array);
+        console.log(imparesMultiploTres(array));
+        leitor.close();
     });
 }
 
@@ -29,9 +30,7 @@ const imparesMultiploTres = (array) => {
         }
     });
 
-    mostraArray = console.log(arrayImparesMultiplos)
-    leitor.close();
-    return mostraArray;
+    return arrayImparesMultiplos;
 }
 
 main();

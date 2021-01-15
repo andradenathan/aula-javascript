@@ -19,7 +19,10 @@ const tentativaErro = (n) => {
     acertarNumero(randomNumber);
 }
 
-//FUNÇÃO HELPER - UTILIZADA PARA VERIFICAR SE UM DADO NÚMERO É IGUAL AO NÚMERO QUE O COMPUTADOR PENSOU.
+/* FUNÇÃO HELPER - UTILIZADA PARA VERIFICAR SE UM DADO NÚMERO É IGUAL AO NÚMERO QUE O COMPUTADOR PENSOU.
+Nessa função foi usado o conceito de recursividade, que é chamar a própria função nela mesma, para mostrar o 
+valor do número que o computador estava pensando ao usuário desistir.  
+*/
 const acertarNumero = (randomNumber) => {
     leitor.question("Qual seria o número que estou pensando? (APERTE ENTER PARA DESISTIR) ", (answer) => {
         if(answer == ""){
