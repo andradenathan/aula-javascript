@@ -5,7 +5,7 @@ const leitor = readline.createInterface({
     output: process.stdout
 });
 
-/* Programa principal onde ocorre a recursividade que chama as funções de cada exercício
+/* Programa principal onde ocorre a chamada da função de cada exercício
 Para rodar o exercício 01 precisa descomentá-lo e comentar os exercícios abaixo */
 const main = () => {
     leitor.question('Qual seria o n? ', (answer) => {
