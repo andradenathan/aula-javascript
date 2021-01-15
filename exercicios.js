@@ -5,10 +5,18 @@ const leitor = readline.createInterface({
     output: process.stdout
 });
 
+/* Programa principal onde ocorre a recursividade que chama as funções de cada exercício
+Para rodar o exercício 01 precisa descomentá-lo e comentar os exercícios abaixo */
 const main = () => {
     leitor.question('Qual seria o n? ', (answer) => {
-        let n = parseInt(answer);
-        tentativaErro(n);
+        const n = parseInt(answer);
+        //tentativaErro(n); '-> CHAMADA PARA O EXERCÍCIO 01'
+        array = preencherArray(n); '-> CHAMADA PARA O EXERCÍCIO 02, 03'
+        console.log(`Ímpares e múltiplos de 3 até ${n}:`); '-> CHAMADA PARA O EXERCÍCIO 02'
+        imparesMultiploTres(array)
+        console.log('Valores triplicados: ', triplicaValores(array));
+        console.log('Últimos 3 valores: ',  ultimosValores(array));
+        console.log('Valores embaralhados: ', embaralhaValores(array));
     });
 }
 
@@ -18,6 +26,7 @@ const tentativaErro = (n) => {
     acertarNumero(randomNumber);
 }
 
+//FUNÇÃO HELPER - UTILIZADA PARA VERIFICAR SE UM DADO NÚMERO É IGUAL AO NÚMERO QUE O COMPUTADOR PENSOU.
 const acertarNumero = (randomNumber) => {
     leitor.question("Qual seria o número que estou pensando? (APERTE ENTER PARA DESISTIR) ", (answer) => {
         if(answer == ""){
@@ -37,6 +46,8 @@ const acertarNumero = (randomNumber) => {
 }
 
 //EXERCÍCIO 02
+
+// FUNÇÃO HELPER - PREENCHE O ARRAY DADO UM N VALOR.
 const preencherArray = (n) => {
     var array = [];
     for(var i = 0; i < n; i++) array.push(i);
@@ -50,7 +61,9 @@ const imparesMultiploTres = (array) => {
         }
     });
 
-    return arrayImparesMultiplos;
+    mostraArray = console.log(arrayImparesMultiplos)
+    leitor.close();
+    return mostraArray;
 }
 
 //EXERCÍCIO 03
@@ -60,8 +73,8 @@ const triplicaValores = (array) => {
     });
 }
 
-const ultimosValores = (array, n) => {
-    return array.slice(-n);
+const ultimosValores = (array) => {
+    return array.slice(-3);
 }
 
 const embaralhaValores = (array) => {
@@ -89,5 +102,6 @@ const cartas = (valores, naipes) => {
     return console.log(arrayCartas);
 }
 
-// main();
-cartas(valores, naipes);
+/* CHAMADA DAS FUNÇÕES ACIMA */
+main(); //PARA RODAR O PROGRAMA PRINCIPAL
+//cartas(valores, naipes) '-> PARA RODAR O EXERCÍCIO 04'
